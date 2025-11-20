@@ -15,8 +15,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     <!-- Styles / Scripts -->
-    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 
 </head>
