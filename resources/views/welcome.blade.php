@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 
     <!-- Styles / Scripts -->
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
 
 
 </head>
@@ -248,6 +249,7 @@
 
 <!-- Leaflet JS + inicialización del mapa con filtros -->
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src=" {{ asset('resources/js/app.js') }}"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         try {
