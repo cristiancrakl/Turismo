@@ -15,6 +15,7 @@ class Tour extends Model
         'image',
         'price',
         'tags',
+        'tipos',
         'tipo',
         'location',
         'duration_minutes',
@@ -23,6 +24,7 @@ class Tour extends Model
 
     protected $casts = [
         'tags' => 'array',
+        'tipos' => 'array',
         'active' => 'boolean',
         'price' => 'decimal:2',
     ];

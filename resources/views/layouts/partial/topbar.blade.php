@@ -6,8 +6,6 @@
             <a href="{{ url('dashboard') }}" class="nav-link">Home</a>
             <a href="{{ route('contactanos') }}" class="nav-link">Contactanos</a>
             <a href="{{ route('about') }}" class="nav-link">About Us</a>
-            <a href="#" class="nav-link">Booking</a>
-            <a href="#" class="nav-link">FAQ</a>
         </div>
 
         <!-- Right side user panel -->
