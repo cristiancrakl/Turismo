@@ -1,0 +1,306 @@
+/* Dashboard Landing Page Styles */
+
+/* General Styles */
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fff;
+    line-height: 1.6;
+}
+
+
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    color: white;
+    padding-left: 5%;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+    transition: background-image 1s ease-in-out;
+    z-index: -1;
+}
+
+.hero-bg.bg-changing {
+    animation: bgFade 1s ease-in-out;
+}
+
+@keyframes bgFade {
+    0% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.hero-carousel {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 1200px;
+}
+
+.carousel-container {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-container img {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.carousel-container img:hover {
+    transform: scale(1.05);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero p {
+    font-size: 15px;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.btn-primary-custom {
+    background-color: #178f6a;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary-custom:hover {
+    background-color: #0d5a4a;
+    transform: translateY(-2px);
+    color: white;
+    text-decoration: none;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 5rem 0;
+    background-color: #f8f9fa;
+}
+
+.benefits .container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.benefit-item a,
+.benefit-item a:hover,
+.benefit-item a:focus {
+    text-decoration: none;
+}
+
+.benefits h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-item i {
+    font-size: 3rem;
+    color: #178f6a;
+    margin-bottom: 1rem;
+}
+
+.benefit-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+/* Tours Section */
+.tours {
+    padding: 5rem 0;
+    background-color: white;
+}
+
+.tours h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.tours-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.tour-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.tour-card:hover {
+    transform: translateY(-5px);
+}
+
+.tour-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tour-card-content {
+    padding: 1.5rem;
+}
+
+.tour-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.tour-price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #178f6a;
+    margin-bottom: 0.5rem;
+}
+
+.tour-rating {
+    color: #ffc107;
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding-left: 2%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-content {
+        max-width: 90%;
+        padding: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero-carousel {
+        width: 95%;
+        bottom: 2%;
+    }
+
+    .carousel-container img {
+        width: 150px;
+        height: 90px;
+    }
+
+    .benefits-grid,
+    .tours-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .navbar-custom .navbar-nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .navbar-custom .navbar-nav.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
