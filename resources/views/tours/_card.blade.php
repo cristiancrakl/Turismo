@@ -37,10 +37,14 @@
         @endauth
 
         <div class="tour-price">
+            @if($tour->tipo === 'emprendedores' && $tour->profile_link)
+            <a target="_blank" href="{{ $tour->profile_link }}">Ver Perfil</a>
+            @else
             @php
             $mapUrl = $tour->link ?? ('https://www.google.com/maps/search/?api=1&query=' . urlencode($tour->location ?? $tour->name));
             @endphp
             <a target="_blank" href="{{ $mapUrl }}">Ver en Google Maps</a>
+            @endif
         </div>
     </div>
 </div>

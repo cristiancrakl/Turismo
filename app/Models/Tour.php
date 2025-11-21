@@ -20,6 +20,7 @@ class Tour extends Model
         'location',
         'duration_minutes',
         'active',
+        'profile_link',
     ];
 
     protected $casts = [
