@@ -42,4 +42,22 @@ class TourController extends Controller
         })->where('active', true)->get();
         return view('tours.emprendedores', compact('tours'));
     }
+
+    /**
+     * Show a single tour detail and related tours
+     */
+    public function show(Tour $tour)
+    {
+        // Related tours: same tipo (or in tipos), exclude current
+        $related = Tour::where('id', '<>', $tour->id)
+            ->where('active', true)
+            ->where(function ($q) use ($tour) {
+                $q->where('tipo', $tour->tipo)
+                    ->orWhereJsonContains('tipos', $tour->tipo);
+            })
+            ->take(6)
+            ->get();
+
+        return view('tours.show', compact('tour', 'related'));
+    }
 }

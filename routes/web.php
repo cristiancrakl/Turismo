@@ -18,6 +18,8 @@ Route::get('/tours/lugares', [TourController::class, 'lugares'])->name('tours.lu
 Route::get('/tours/restaurantes', [TourController::class, 'restaurantes'])->name('tours.restaurantes');
 Route::get('/tours/cultura', [TourController::class, 'cultura'])->name('tours.cultura');
 Route::get('/tours/emprendedores', [TourController::class, 'emprendedores'])->name('tours.emprendedores');
+// Show single tour
+Route::get('/tours/{tour}', [TourController::class, 'show'])->name('tours.show');
 
 // Páginas estáticas: Contactanos y About
 Route::get('/contactanos', [PageController::class, 'contactanos'])->name('contactanos');
