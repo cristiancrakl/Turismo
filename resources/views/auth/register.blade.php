@@ -8,9 +8,9 @@
     <div class="card">
         <div class="card-header text-center">
             <div class="user-icon">
-                <i class="fas fa-leaf"></i>
+                <i class="fas fa-map-marker-alt"></i>
             </div>
-            <h1 class="h1">TripLocal</h1>
+            <h1 class="h1">{{ config('app.name') }}</h1>
             <p class="login-box-msg">Crea una cuenta para explorar</p>
         </div>
         <div class="card-body">
