@@ -6,11 +6,20 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\InterestController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\PageController;
+use Illuminate\Support\Facades\Artisan;
 
 
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/limpiar-cache', function () {
+    Artisan::call('view:clear');
+    Artisan::call('config:clear');
+    Artisan::call('route:clear');
+    Artisan::call('event:clear');
+    return "Caché limpiada";
 });
 
 // Rutas públicas por tipo de tour
