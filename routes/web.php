@@ -14,12 +14,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/limpiar-cache', function () {
-    Artisan::call('view:clear');
-    Artisan::call('config:clear');
-    Artisan::call('route:clear');
-    Artisan::call('event:clear');
-    return "Caché limpiada";
+Route::get('/optimize-clear', function () {
+    \Illuminate\Support\Facades\Artisan::call('optimize:clear');
+    return '<h1>✅ Caché de configuración, rutas y vistas borrada.</h1>';
 });
 
 // Rutas públicas por tipo de tour
